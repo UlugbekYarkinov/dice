@@ -20,7 +20,7 @@ class _DicePageState extends State<DicePage> {
       rightDice = Random().nextInt(6)+1;
 
       if(leftDice == rightDice) {
-        counter++;
+        counter == 4 ? counter = 0 : counter++;
       }
     });
   }
