@@ -30,6 +30,9 @@ class MyApp extends StatelessWidget {
 class DicePage extends StatelessWidget {
   DicePage({Key? key}) : super(key: key);
 
+  int leftDice = 1;
+  int rightDice = 2;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -37,7 +40,18 @@ class DicePage extends StatelessWidget {
       children: [
         Row(
           children: [
-
+            Expanded(
+              child: TextButton(
+                onPressed: (){},
+                child: Image.asset('images/dice$leftDice.png'),
+              ),
+            ),
+            Expanded(
+              child: TextButton(
+                onPressed: (){},
+                child: Image.asset('images/dice$rightDice.png'),
+              ),
+            ),
           ],
         ),
       ],
