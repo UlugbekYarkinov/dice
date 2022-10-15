@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.redAccent,
         appBar: AppBar(
+          title: const Center(child: Text('Dice Game'),),
           backgroundColor: Colors.red,
           elevation: 15.0,
         ),
@@ -38,11 +39,16 @@ class DicePage extends StatefulWidget {
 class _DicePageState extends State<DicePage> {
   int leftDice = 1;
   int rightDice = 2;
+  int counter = 0;
 
   void change(){
     setState(() {
       leftDice = Random().nextInt(6)+1;
       rightDice = Random().nextInt(6)+1;
+
+      if(leftDice == rightDice) {
+        counter++;
+      }
     });
   }
 
@@ -67,6 +73,7 @@ class _DicePageState extends State<DicePage> {
             ),
           ],
         ),
+        Text('Your score: $counter'),
       ],
     );
   }
