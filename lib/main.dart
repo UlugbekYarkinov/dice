@@ -15,7 +15,32 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      //home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+        backgroundColor: Colors.redAccent,
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          elevation: 15.0,
+        ),
+        body: DicePage(),
+      ),
+    );
+  }
+}
+
+class DicePage extends StatelessWidget {
+  DicePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Row(
+          children: [
+
+          ],
+        ),
+      ],
     );
   }
 }
