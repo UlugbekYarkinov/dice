@@ -27,10 +27,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class DicePage extends StatelessWidget {
+class DicePage extends StatefulWidget {
   DicePage({Key? key}) : super(key: key);
 
+  @override
+  State<DicePage> createState() => _DicePageState();
+}
+
+class _DicePageState extends State<DicePage> {
   int leftDice = 1;
+
   int rightDice = 2;
 
   @override
